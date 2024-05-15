@@ -21,7 +21,7 @@ public class CircularQueue<T> implements Queue<T> {
 			throw new QueueOverflowException();
 		} else {
 			array[tail] = element;
-			tail = (tail + 1) % array.length;
+			tail = (tail++) % array.length;
 			elements++;
 		}
 	}
@@ -33,7 +33,7 @@ public class CircularQueue<T> implements Queue<T> {
 		} else {
 			T element = array[head];
 			array[head] = null;
-			head = (head + 1) % array.length;
+			head = (head++) % array.length;
 			elements--;
 			return element;
 		}
