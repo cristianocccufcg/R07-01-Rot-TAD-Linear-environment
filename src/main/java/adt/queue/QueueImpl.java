@@ -7,8 +7,8 @@ public class QueueImpl<T> implements Queue<T> {
 
 	@SuppressWarnings("unchecked")
 	public QueueImpl(int size) {
-		array = (T[]) new Object[size];
-		tail = -1;
+		this.array = (T[]) new Object[size];
+		this.tail = -1;
 	}
 
 	@Override
